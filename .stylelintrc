@@ -1,4 +1,104 @@
 {
-  "extends": ["stylelint-config-recommended-scss"],
-  "rules": {}
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-clean-order"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z]([a-z0-9-]+)?(__[a-z0-9-]+)?(--[a-z0-9-]+)?$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Els selectors de classe han de seguir la convenció BEM (block__element--modifier)."
+      }
+    ],
+    "selector-max-id": [
+      0,
+      { "message": "Evita utilitzar IDs." }
+    ],
+    "declaration-no-important": [
+      true,
+      { "message": "Evita l’ús de !important excepte casos molt concrets." }
+    ],
+    "selector-max-compound-selectors": [
+      3,
+      { "message": "Evita selectors massa llargs o imbricats (màxim tres nivells)." }
+    ],
+    "max-nesting-depth": [
+      3,
+      { "message": "Limita el nesting a un màxim de tres nivells." }
+    ],
+    "color-named": [
+      "never",
+      { "message": "Els colors han de definir-se amb valors hexadecimals o variables Sass." }
+    ],
+    "no-irregular-whitespace": [
+      true,
+      { "message": "Assegura que no hi hagi espais invisibles o innecessaris al codi." }
+    ],
+
+    "selector-type-case": [
+      "lower",
+      { "message": "Els selectors i etiquetes han d’estar sempre en minúscules." }
+    ],
+
+    "order/properties-order": [
+      [
+        {
+          "groupName": "Positioning",
+          "emptyLineBefore": "always",
+          "properties": ["position", "top", "right", "bottom", "left", "z-index"]
+        },
+        {
+          "groupName": "Box Model",
+          "emptyLineBefore": "always",
+          "properties": [
+            "display",
+            "width",
+            "height",
+            "padding",
+            "margin",
+            "border",
+            "border-radius",
+            "overflow"
+          ]
+        },
+        {
+          "groupName": "Typography",
+          "emptyLineBefore": "always",
+          "properties": [
+            "font",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "line-height",
+            "text-align",
+            "color"
+          ]
+        },
+        {
+          "groupName": "Visual",
+          "emptyLineBefore": "always",
+          "properties": [
+            "background",
+            "background-color",
+            "background-image",
+            "box-shadow",
+            "opacity"
+          ]
+        },
+        {
+          "groupName": "Misc",
+          "emptyLineBefore": "always",
+          "properties": ["transition", "animation", "cursor"]
+        }
+      ],
+      {
+        "unspecified": "bottomAlphabetical",
+        "message": "Les propietats han d’estar ordenades seguint l’esquema de Mark Otto (Positioning → Box Model → Typography → Visual → Misc)."
+      }
+    ]
+  }
 }
