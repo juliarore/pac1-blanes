@@ -3,17 +3,26 @@
  * Do not include SCSS code in this file.
  */
 
- /**
- * Import dependencies
+/**
+ * Import settings and tools
  */
-@use "dependencies";
+@use "./1-variables/variables";
+@use "./2-tools/mixins";
 
 /**
- * Import layouts
- * It's a best practice to use a different partial for each page
+ * Import dependencies
  */
+@use "./3-generic/dependencies";
 
- @use "layouts/home";
+/* Import generic styles */
+@use "./3-generic/reset";
+
+/* Import elements styles */
+@use "./4-elements/base";
+
+/* Import objects styles */
+@use "./5-objects/container";
+
 
 /**
  * Do NOT include anything else in this file!
