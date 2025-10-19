@@ -1,9 +1,19 @@
 @use "sass:color";
 
 // Typography
+$font-family-sans-serif: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+
+// Font weights
+$fw-regular: 400;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
 
 
 // Colors
 
 
 // Breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
