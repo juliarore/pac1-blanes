@@ -1,0 +1,4 @@
+// Opacity function
+@function opacity($color, $alpha) {
+  @return rgba($color, $alpha);
+}
