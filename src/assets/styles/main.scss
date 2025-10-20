@@ -4,25 +4,34 @@
  */
 
 /**
- * Import settings and tools
+ * Import SETTINGS
  */
-@use "./1-variables/variables";
+@use "./1-settings/variables";
+
+/**
+ * Import TOOLS
+ */
+@use "./2-tools/functions";
 @use "./2-tools/mixins";
 
 /**
- * Import dependencies
+ * Import DEPENDENCIES
  */
 @use "./3-generic/dependencies";
 
-/* Import generic styles */
+/* Import GENERIC */
 @use "./3-generic/reset";
 
-/* Import elements styles */
+/* Import ELEMENTS */
 @use "./4-elements/base";
 
-/* Import objects styles */
+/* Import OBJECTS */
 @use "./5-objects/container";
 
+/* Import COMPONENTS */
+@use "./6-components/nav";
+@use "./6-components/hero";
+@use "./6-components/button";
 
 /**
  * Do NOT include anything else in this file!
