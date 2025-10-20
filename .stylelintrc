@@ -1,11 +1,8 @@
 {
   "extends": [
     "stylelint-config-recommended-scss",
-    "stylelint-config-clean-order"
-  ],
-  "plugins": [
-    "stylelint-order"
-  ],
+    "stylelint-config-recess-order"
+  ],  "plugins": ["stylelint-order"],
   "rules": {
     "selector-class-pattern": [
       "^[a-z]([a-z0-9-]+)?(__[a-z0-9-]+)?(--[a-z0-9-]+)?$",
@@ -42,63 +39,6 @@
     "selector-type-case": [
       "lower",
       { "message": "Els selectors i etiquetes han d’estar sempre en minúscules." }
-    ],
-
-    "order/properties-order": [
-      [
-        {
-          "groupName": "Positioning",
-          "emptyLineBefore": "always",
-          "properties": ["position", "top", "right", "bottom", "left", "z-index"]
-        },
-        {
-          "groupName": "Box Model",
-          "emptyLineBefore": "always",
-          "properties": [
-            "display",
-            "width",
-            "height",
-            "padding",
-            "margin",
-            "border",
-            "border-radius",
-            "overflow"
-          ]
-        },
-        {
-          "groupName": "Typography",
-          "emptyLineBefore": "always",
-          "properties": [
-            "font",
-            "font-family",
-            "font-size",
-            "font-weight",
-            "line-height",
-            "text-align",
-            "color"
-          ]
-        },
-        {
-          "groupName": "Visual",
-          "emptyLineBefore": "always",
-          "properties": [
-            "background",
-            "background-color",
-            "background-image",
-            "box-shadow",
-            "opacity"
-          ]
-        },
-        {
-          "groupName": "Misc",
-          "emptyLineBefore": "always",
-          "properties": ["transition", "animation", "cursor"]
-        }
-      ],
-      {
-        "unspecified": "bottomAlphabetical",
-        "message": "Les propietats han d’estar ordenades seguint l’esquema de Mark Otto (Positioning → Box Model → Typography → Visual → Misc)."
-      }
     ]
   }
 }
