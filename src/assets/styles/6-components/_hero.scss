@@ -1,5 +1,5 @@
 @use "../1-settings/variables" as v;
-@use "../1-settings/functions" as f;
+@use "../2-tools/functions" as f;
 
 .hero {
   position: relative;
@@ -9,8 +9,8 @@
   justify-content: center;
   width: 100%;
   min-height: 70vh;
-  margin-inline: auto;
   padding-inline: 1.5rem;
+  margin-inline: auto;
   text-align: center;
   background-image: url('../images/hero-img.jpg');
   background-position: center;
