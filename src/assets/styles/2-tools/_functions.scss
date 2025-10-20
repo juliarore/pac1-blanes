@@ -1,0 +1,11 @@
+@use "sass:color";
+
+// Function to get opacity color
+@function opacity($color, $alpha) {
+  @return color.change($color, $alpha: $alpha);
+}
+
+// Function to onvert px to rem (default base = 16px)
+@function rem($px, $base: 16) {
+  @return ($px / $base) * 1rem;
+}
