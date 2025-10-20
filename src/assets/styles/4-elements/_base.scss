@@ -1,2 +1,23 @@
-@use '../1-variables/variables' as variables;
+@use "../1-settings/variables" as v;
 
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: v.$font-family-sans;
+  font-weight: v.$fw-regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: v.$font-family-serif;
+  font-weight: v.$fw-bold;
+}
+
+a {
+  color: v.$color-primary;
+  text-decoration: none;
+}
