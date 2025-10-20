@@ -1,8 +1,10 @@
 @use "sass:color";
+@use "../2-tools/functions" as fn;
 
 // Typography
-$font-family-sans-serif: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+$font-family-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif;
+$font-family-serif: "Playfair Display", Georgia, "Times New Roman", serif;
 
 // Font weights
 $fw-regular: 400;
@@ -10,10 +12,13 @@ $fw-semi-bold: 600;
 $fw-bold: 700;
 $fw-extra-bold: 800;
 
-
 // Colors
-
+$color-primary: #378978;
+$color-white: #fff;
+$color-black: #000;
+$color-primary-hover: #276458;
+$color-opacity: fn.opacity(#fff, 0.8);
 
 // Breakpoints
 $breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
+$breakpoint-mobile: 480px;
