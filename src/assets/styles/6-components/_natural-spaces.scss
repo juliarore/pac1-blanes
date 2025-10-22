@@ -1,0 +1,58 @@
+@use "../1-settings/variables" as v;
+@use "../2-tools/functions" as f;
+
+.natural-spaces {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-block: 3rem;
+  overflow: hidden;
+
+  &__swiper {
+    width: 100%;
+    height: f.rem(500);
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  &__pagination {
+    margin-top: 1rem;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: v.$color-primary;
+    }
+  }
+
+  &__button {
+    color: v.$color-white;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      color: v.$color-primary;
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+}
