@@ -27,12 +27,14 @@
 
 /* Import OBJECTS */
 @use "./5-objects/container";
+@use "./5-objects/titles";
 
 /* Import COMPONENTS */
 @use "./6-components/nav";
 @use "./6-components/hero";
 @use "./6-components/button";
 @use "./6-components/about";
+@use "./6-components/natural-spaces";
 
 /**
  * Do NOT include anything else in this file!

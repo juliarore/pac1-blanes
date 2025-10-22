@@ -6,17 +6,13 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .about__card img {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
-}
-
-.about__title {
-  font-size: f.rem(36);
-  margin-bottom: 1rem;
 }
 
 .about__text {
