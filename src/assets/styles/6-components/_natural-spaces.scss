@@ -3,8 +3,8 @@
 
 .natural-spaces {
   max-width: 1200px;
-  margin-inline: auto;
   padding-block: 3rem;
+  margin-inline: auto;
   overflow: hidden;
 
   &__swiper {
@@ -33,8 +33,8 @@
       position: absolute;
       bottom: 20px;
       left: 50%;
-      transform: translateX(-50%);
       z-index: 10;
+      transform: translateX(-50%);
     }
 
     .swiper-pagination-bullet-active {
@@ -43,10 +43,10 @@
   }
 
   &__button {
-    color: v.$color-white;
     position: absolute;
     top: 50%;
     z-index: 10;
+    color: v.$color-white;
     transform: translateY(-50%);
     transition: transform 0.3s ease, color 0.3s ease;
 

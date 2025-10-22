@@ -4,9 +4,9 @@
 .about__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
   gap: 2rem;
-  margin-bottom: 2rem;
+  align-items: center;
+  padding-block: 3rem;
 }
 
 .about__card img {
