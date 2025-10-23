@@ -1,0 +1,45 @@
+@use "../1-settings/variables" as v;
+@use "../2-tools/functions" as f;
+
+.contact{
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-block: 2rem;
+    max-width: f.rem(600);
+  }
+
+  &__itemform {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: .6rem .9rem;
+    border-radius: .5rem;
+    font-family: v.$font-family-sans;
+    font-size: f.rem(16);
+    border: 1px solid v.$color-primary;
+    transition: border-color .2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: v.$color-primary-hover;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: 0.5rem;
+
+    .contact__input {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
+
