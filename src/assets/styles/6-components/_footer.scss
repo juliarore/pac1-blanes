@@ -1,0 +1,22 @@
+@use "../1-settings/variables" as v;
+// @use "../2-tools/functions" as f;
+
+.footer {
+  background-color: v.$color-primary;
+  color: v.$color-white;
+  text-align: center;
+  padding: .5rem 0;
+
+  &__text {
+    margin-bottom: .5rem;
+  }
+
+  &__link {
+    color: v.$color-white;
+    text-decoration: underline;
+
+    &:hover {
+      color: v.$color-opacity;
+    }
+  }
+}
