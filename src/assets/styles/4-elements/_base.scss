@@ -18,7 +18,12 @@ h6 {
   font-weight: v.$fw-bold;
 }
 
-a {
+a,
+a.link {
   color: v.$color-primary;
   text-decoration: none;
+  &:hover {
+    color: v.$color-primary-hover;
+    transition: color 0.2s ease;
+  }
 }
