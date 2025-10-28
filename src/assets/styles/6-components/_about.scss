@@ -1,5 +1,7 @@
 @use "../1-settings/variables" as v;
 @use "../2-tools/functions" as f;
+@use "../2-tools/mixins" as m;
+
 
 .about__grid {
   display: grid;
@@ -7,6 +9,11 @@
   gap: 2rem;
   align-items: center;
   padding-block: 3rem;
+
+  @include m.respond(tablet) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .about__card img {
@@ -16,5 +23,32 @@
 }
 
 .about__text {
+  margin-bottom: 1rem;
   text-align: justify;
+
+  @include m.respond(mobile) {
+    max-height: 12.5rem;
+    overflow: hidden;
+  }
+}
+
+.about__text.expanded {
+  @include m.respond(mobile) {
+    max-height: 100%;
+  }
+}
+
+.about__see-more {
+  display: none;
+  margin-top: 1rem;
+  font-family: v.$font-family-sans;
+  font-size: 1rem;
+  font-weight: bold;
+  color: v.$color-primary;
+  background: none;
+  border: none;
+
+  @include m.respond(mobile) {
+    display: block;
+  }
 }
