@@ -1,5 +1,6 @@
 @use "../1-settings/variables" as v;
 @use "../2-tools/functions" as f;
+@use "../2-tools/mixins" as m;
 
 .hero {
   position: relative;
@@ -20,5 +21,13 @@
     margin-bottom: 3rem;
     font-size: f.rem(48);
     color: v.$color-white;
+
+    @include m.respond(mobile) {
+      font-size: f.rem(32);
+    }
+
+    @include m.respond(tablet) {
+      font-size: f.rem(40);
+    }
   }
 }
