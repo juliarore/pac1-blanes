@@ -4,6 +4,9 @@
  */
 
 import './natural-spaces.js';
+import './burger-menu.js';
+import './see-more.js';
+
 // import SomeModule from 'some-node-module';
 
 /**
