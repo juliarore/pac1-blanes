@@ -20,6 +20,6 @@ $color-black: #000;
 $color-primary-hover: #276458;
 $color-opacity: fn.opacity(#fff, 0.8);
 
-// Breakpoints
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 480px;
+// Breakpoints (max-width)
+$bp-tablet: 1024px;
+$bp-mobile: 768px;
